@@ -1,0 +1,45 @@
+SELECT * FROM users;
+SELECT * FROM progress;
+
+
+SELECT * FROM users
+ORDER BY email_domain ASC
+LIMIT 25;
+
+
+SELECT * FROM USERS 
+WHERE city ='New York';
+
+
+SELECT * FROM users
+WHERE mobile_app = 'mobile-user';
+
+
+
+SELECT sign_up_at,
+   strftime('%H', sign_up_at) = 1
+FROM users
+GROUP BY 1
+LIMIT 20;
+
+
+SELECT  mobile_app FROM  users;
+    INNER JOIN  progress
+     ON users.mobile_app = progress.learn_html ;
+
+
+     
+SELECT  country FROM  users;
+     INNER JOIN progress
+     ON users.country = progress.learn_cpp ;
+
+ 
+
+
+
+
+ 
+
+
+
+
